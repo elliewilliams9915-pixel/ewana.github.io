@@ -1,0 +1,111 @@
+<html lang="en">
+ <head> 
+  <title>چوونه‌ژووره‌وه‌</title> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <!--===============================================================================================--> 
+  <link rel="icon" type="image/png" href="/Assets/Global/login/images/icons/favicon.ico"> 
+  <!--===============================================================================================--> 
+  <link rel="stylesheet" type="text/css" href="/Assets/Global/login/vendor/bootstrap/css/bootstrap.min.css"> 
+  <!--===============================================================================================--> 
+  <link rel="stylesheet" type="text/css" href="/Assets/Global/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css"> 
+  <!--===============================================================================================--> 
+  <link rel="stylesheet" type="text/css" href="/Assets/Global/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css"> 
+  <!--===============================================================================================--> 
+  <link rel="stylesheet" type="text/css" href="/Assets/Global/login/vendor/animate/animate.css"> 
+  <!--===============================================================================================--> 
+  <link rel="stylesheet" type="text/css" href="/Assets/Global/login/vendor/css-hamburgers/hamburgers.min.css"> 
+  <!--===============================================================================================--> 
+  <link rel="stylesheet" type="text/css" href="/Assets/Global/login/vendor/select2/select2.min.css"> 
+  <!--===============================================================================================--> 
+  <link rel="stylesheet" type="text/css" href="/Assets/Global/login/css/util.css"> 
+  <link rel="stylesheet" type="text/css" href="/Assets/Global/login/css/main.css"> 
+  <!--===============================================================================================--> 
+  <link href="/Assets/Global/css/notonaskharabic.css" rel="stylesheet"> 
+  <style>
+        body.rtl *:not(i):not(em):not(.lnr) {
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+    </style> 
+ </head> 
+ <body class="rtl" dir="rtl" style="direction:rtl"> 
+  <div class="container-fluid" style="height: 100%;"> 
+   <div class="row" style="justify-content: center;height: 100%;align-items: center;"> 
+    <div class="col-md-4"> 
+     <div class="wrap-login"> 
+      <form class="login100-form validate-form" method="post"> 
+       <span class="login100-form-title p-b-10"> <img src="/Assets/Global/images/krg logo.png" style="width:140px"> </span> 
+       <span class="login100-form-title p-b-15"> قوتابخانەى ئەلیکترۆنى </span> 
+       <div class="wrap-input100 validate-input m-b-7"> 
+        <input class="input100 input102" type="text" autocomplete="off" data-val="true" data-val-required="The Email field is required." id="Input_Email" name="Input.Email" value="" placeholder="کۆدی بەکارهێنەر"> 
+        <span class="focus-input100"></span> 
+        <span class="symbol-input100"> <span class="lnr lnr-user user-icon"></span> </span> 
+       </div> 
+       <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required"> 
+        <input class="input100 input101" type="password" data-val="true" data-val-required="The Password field is required." id="Input_Password" name="Input.Password" placeholder="وشه‌ى نهێنى"> 
+        <span class="focus-input100"></span> 
+        <span class="symbol-input100"> <span class="lnr lnr-lock lock-icon"></span> </span> 
+       </div> 
+       <div class="contact100-form-checkbox m-l-4"> 
+        <input class="input-checkbox100" type="checkbox" onchange="TogglePassword(this.checked,'Input_Password');" data-val="true" data-val-required="The Remember me? field is required." id="Input_RememberMe" name="Input.RememberMe" value="true"> 
+        <label class="label-checkbox100" for="Input_RememberMe">وشەى نهێنى خۆت ببینە</label> 
+       </div> 
+       <div class="container-login100-form-btn p-t-25"> 
+        <button type="submit" class="login100-form-btn" style="background:#BE9E4E">چوونه‌ژووره‌وه‌</button> 
+       </div> 
+       <div class="text-center w-full p-t-2 p-b-5"> 
+        <div class="validation-summary validation-summary-valid" data-valmsg-summary="true"> 
+         <ul>
+          <li style="display:none"></li> 
+         </ul>
+        </div> 
+       </div> 
+       <div class="text-center w-full p-t-10"> 
+        <span class="txt1">ئايا وشه‌ى نهێنيت له‌بيركردووه‌</span> 
+        <a class="txt1 bo1 hov1" href="/ForgotPassword">لێره‌ كليك بكه‌</a> 
+       </div> 
+       <div class="text-center w-full p-t-10"> 
+        <span class="txt1" style="font-size: 14px;"> Powered by SoftMax </span> 
+       </div> 
+       <input type="hidden" id="SGYBS" name="SGYBS"> 
+       <input name="__RequestVerificationToken" type="hidden" value="CfDJ8CVl6rhkYU9Lo6Okim_Jb9vmcJRtgkkpV7j8tO6FqJYH-_bg9VJbsg5UL16Dk192gJjE3MlzKmS1KA1z5uCsOEw8Zua3eIFm0eXGxVF6sA5tRWA7FB-0c914PBPind-z7j9w_aeGCD9zArAP-0Y-mv8">
+       <input name="Input.RememberMe" type="hidden" value="false">
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <style>
+        .validation-summary li {
+            color: red;
+        }
+
+        .validation-summary ul {
+            list-style: none;
+            text-align: center;
+        }
+    </style> 
+  <script>
+        function TogglePassword(checked, passElementId) {
+            var x = document.getElementById(passElementId);
+            if (checked)
+                x.type = "text";
+            else
+                x.type = "password";
+        }
+    </script> 
+  <!--===============================================================================================--> 
+  <!--===============================================================================================--> 
+  <!--===============================================================================================--> 
+  <!--===============================================================================================--> 
+  <script>
+        $(function () {
+            $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+                function (json) {
+                    $('#SGYBS').val(json.ip);
+                }
+            );
+        });
+    </script> 
+ </body>
+    </html>
